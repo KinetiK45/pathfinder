@@ -33,11 +33,12 @@ void print_Way(int maxsize, int *result, char **arr, t_ways *waysArr){
         mx_printstr(" = ");
         mx_printint(sum);
         mx_printstr("\n========================================\n");
-
     }
     else{
         mx_printstr("\nDistance: ");
-        mx_printint(getDistanceBetweenbyIndex(result[0], result[1], arr, waysArr));
+        int dist = getDistanceBetweenbyIndex(result[0], result[1], arr, waysArr);
+        if (dist == -1) dist = 0;
+        mx_printint(dist);
         mx_printstr("\n========================================\n");
     }
 }

@@ -16,7 +16,7 @@ void mx_printerr(const char *s);
 int mx_atoi(const char *str);
 void check_filedata(char *filedata);
 bool chek_island(char *island, char ***arr, int size, int line);
-void checkdup(char *filedata, char *is1, char *is2);
+int checkcount(char *filedata, char *is1, char *is2);
 char **get_islands_arr(char *filename, int *count_of_islands);
 t_ways *get_ways_arr(char *filename, int *ways_size);
 void calculate_ways(char *filename);
@@ -24,6 +24,6 @@ int getIndexOfIsland(char *island, char **arr);
 int getDistanceBetweenbyIndex(int first, int last, char **arr, t_ways *waysArr);
 void calculate_way(int start, int finish, char **arr, t_ways *waysArr);
 void print_Way(int maxsize, int *result, char **arr, t_ways *waysArr);
-void printFromResult(int size, int *resultMatrix, char **arr, t_ways *waysArr, int minDist);
+void printFromResult(int size, int *resultMatrix, char **arr, t_ways *waysArr);
 
 #endif
